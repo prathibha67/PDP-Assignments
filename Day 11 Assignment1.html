@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEVA CREATIVES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #0a0a0a;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: rgb(190, 18, 18);
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #555;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #777;
+        }
+
+        .carousel {
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #fff;
+            background-color: #555;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HEVA CREATIVES</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <div class="dropdown">
+            <a href="#">Services</a>
+            <div class="dropdown-content">
+                <a href="#">Graphic Designing</a>
+                <a href="#">Video Editing</a>
+                <a href="#">Logo Designing</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Products</a>
+            <div class="dropdown-content">
+                <a href="#">After Effects</a>
+                <a href="#">Adbode Illustration</a>
+                <a href="#">Adbode Premiere-Pro</a>
+            </div>
+        </div>
+        <a href="#">Careers</a>
+    </nav>
+
+    <div class="carousel">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2IL_lspZjj8LWvfL8u_sjWWS977V6RM43LA&usqp=CAU" alt="Image 1">
+        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+
+    <!-- Your content goes here -->
+
+    <script>
+        var currentImageIndex = 0;
+        var images = [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlU2fAZ8h5gP2EoNNPE0-t0ncuD4PdxeZ9QA&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL4pZ8ZF2ueV0l1to2Nl-yximQ76R26aeZKQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOZG1n9Tyd4MuHVY-4ZhnGQf9VLQx4yvrgWg&usqp=CAU"
+        ];
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+
+            if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1;
+            } else if (currentImageIndex >= images.length) {
+                currentImageIndex = 0;
+            }
+
+            document.querySelector('.carousel img').src = images[currentImageIndex];
+        }
+    </script>
+</body>
+
+</html>
+

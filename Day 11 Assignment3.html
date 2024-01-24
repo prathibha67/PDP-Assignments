@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Ticket Booking</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    header {
+            background-color: #333;
+            color: #fff;
+            padding: 2px;
+            text-align: center;
+        }
+ 
+    .parallax-container {
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+ 
+    .parallax {
+      width: 100%;
+      height: 600px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      font-size: 2em;
+    }
+ 
+    .parallax:nth-child(odd) {
+      background-image: url('https://media.istockphoto.com/id/1526986072/photo/airplane-flying-over-tropical-sea-at-sunset.webp?b=1&s=170667a&w=0&k=20&c=_zGG67R5rDadWgB-FeruXnA_k2Mbwy3Iz_AbI9ld4io='); 
+    }
+ 
+    .parallax:nth-child(even) {
+      background-image: url('https://images.unsplash.com/photo-1605590427165-3884d6aa6731?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZsaWdodHxlbnwwfHwwfHx8MA%3D%3D'); 
+    }
+ 
+    .navbar {
+      overflow: hidden;
+      background-color: #07175a;
+      padding: 5px;
+    }
+ 
+    .logo img {
+      max-height: 30px; 
+    }
+ 
+    .navbar a {
+      display: inline-block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+ 
+    .navbar a:hover {
+      background-color: rgb(106, 183, 235);
+      color: black;
+    }
+ 
+    .dropdown {
+      display: inline-block;
+    }
+ 
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f0e7e7;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+ 
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+ 
+    .dropdown-content a {
+      color: rgb(17, 18, 19);
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+ 
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+ 
+    .paper-layout {
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+    }
+ 
+    .paper-layout img {
+      max-width: 15%; 
+    }
+  </style>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myNavbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+  </script>
+</head>
+<body>
+    <header>
+        <h1>
+          Depart By Air</h1>
+    </header>
+  <div class="navbar" id="myNavbar">
+    <a href="#" class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSSMSUWwBc6eJwAAOmV--JqZp9nIFu_NWePu1hPCPrXvCIBJ2IHo0gmjXoXa-ojj7gDr4&usqp=CAU" alt="Logo"></a>
+    <a href="#home">Home</a>
+ 
+    <div class="dropdown">
+      <a href="#" class="dropbtn">Menu</a>
+      <div class="dropdown-content">
+        <a href="#">Edit Booking</a>
+        <a href="#">Change Flight</a>
+        <a href="#">Cancellation</a>
+      </div>
+    </div>
+    <a href="#contact">Contact</a>
+    <a href="#" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+ 
+  <div class="parallax-container">
+    <div class="parallax"></div>
+    <div class="parallax"></div>
+  </div>
+ 
+  <div class="paper-layout">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDgTta97XOznwL4KNQDTcDXSEPTeErJaZgMg&s" alt="Paper Layout Image">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIs7TCgPn_5UxpFlBNREEoFnpW7oDq8uSPuw&s" alt="Paper Layout Image">
+  </div>
+ 
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Shree",
+      "disease": "Fever",
+      "doc": "Surya",
+      "stage": "Normal"
+    },
+    {
+      "id": 2,
+      "name": "Bindu",
+      "disease": "Cough",
+      "doc": "Shivu",
+      "stage": "Severe"
+    },
+    {
+      "id": 3,
+      "name": "Prathi",
+      "disease": "Cold and fever",
+      "doc": "Shetty",
+      "stage": "Critical"
+    },
+    {
+      "id": 4,
+      "name": "Prathibha H S",
+      "disease": "Fever",
+      "doc": "Shree",
+      "stage": "Normal"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

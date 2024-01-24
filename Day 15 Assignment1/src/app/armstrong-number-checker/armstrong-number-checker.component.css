@@ -1,0 +1,35 @@
+/* armstrong-number-checker.component.css */
+ 
+input[type="number"] {
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+   
+  button {
+    background-color: #007bff;
+    color: #c71f81;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+   
+  button:hover {
+    background-color: #0056b3;
+  }
+   
+  p {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+   
+  /* Style for the result message */
+  .armstrong-result {
+    color: #28a745; /* Green color for positive result */
+  }
+   
+  .armstrong-result.false {
+    color: #dc3545; /* Red color for negative result */
+  }
